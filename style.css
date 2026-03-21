@@ -1,0 +1,338 @@
+:root {
+    --bg-dark: #0f1111;
+    --bg-nav-secondary: #222f3d;
+    --bg-footer-light: #37475a;
+    --bg-main: #e2e7e6;
+    --text-light: white;
+    --text-muted: #cccccc;
+    --accent-primary: #febd68;
+    --accent-hover: orange;
+    --link-color: #007185;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    background-color: var(--bg-main);
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.border {
+    border: 1.5px solid transparent;
+    cursor: pointer;
+}
+
+.border:hover {
+    border: 1.5px solid var(--text-light);
+}
+
+/* Header & Navbar */
+.navbar {
+    height: 60px;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 10px;
+}
+
+.nav-logo {
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    background-image: url("amazon_logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 35px;
+    width: 100%;
+}
+
+.nav-address {
+    padding: 5px;
+}
+
+.add-first {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    margin-left: 15px;
+}
+
+.add-sec {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-left: 3px;
+}
+
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+.nav-search {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    max-width: 620px;
+    height: 40px;
+    border-radius: 4px;
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+.nav-search:focus-within {
+    outline: 3px solid var(--accent-hover);
+}
+
+.search-select {
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border: none;
+    color: #333;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+    padding: 0 10px;
+}
+
+.search-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: var(--accent-primary);
+    color: var(--bg-dark);
+    cursor: pointer;
+    border: none;
+}
+
+.nav-signin, .nav-return {
+    padding: 5px;
+}
+
+.nav-signin span, .nav-return span {
+    font-size: 0.7rem;
+}
+
+.nav-second {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nav-cart {
+    display: flex;
+    align-items: flex-end;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 5px;
+}
+
+.nav-cart i {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+/* Secondary Panel */
+.panel {
+    height: 40px;
+    background-color: var(--bg-nav-secondary);
+    display: flex;
+    color: var(--text-light);
+    align-items: center;
+    padding: 0 20px;
+    font-size: 0.85rem;
+}
+
+.panel-all {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 15px;
+    padding: 5px;
+}
+
+.panel-ops {
+    display: flex;
+    gap: 15px;
+    flex: 1;
+}
+
+.panel-ops a {
+    color: var(--text-light);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.panel-deals {
+    font-weight: 700;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url("hero_image.jpg");
+    background-size: cover;
+    background-position: top center;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-msg {
+    background-color: white;
+    color: black;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    width: 90%;
+    max-width: 1200px;
+    margin-bottom: 70px; /* Increased to avoid overlapping cards */
+}
+
+/* Shop Section */
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: -50px;
+}
+
+.box {
+    width: 23%;
+    min-width: 250px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.box-img {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+}
+
+.box p a {
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    margin-top: 15px;
+}
+
+.foot-panel1 {
+    background-color: var(--bg-footer-light);
+    color: var(--text-light);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+.foot-panel1:hover {
+    background-color: #485769;
+}
+
+.foot-panel2 {
+    background-color: var(--bg-nav-secondary);
+    color: var(--text-light);
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.foot-panel2 ul p {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.foot-panel2 ul a {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #dddddd;
+}
+.foot-panel2 ul a:hover {
+    text-decoration: underline;
+}
+
+.foot-panel3 {
+    background-color: var(--bg-nav-secondary);
+    border-top: 0.5px solid #3a4553;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-panel4 {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 20px 0;
+    font-size: 0.7rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.pages a {
+    color: white;
+    margin: 0 10px;
+}
+.pages a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Media Queries */
+@media screen and (max-width: 1024px) {
+    .box { width: 45%; }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar { flex-wrap: wrap; height: auto; padding: 10px; gap: 10px; }
+    .nav-search { order: 3; max-width: 100%; margin: 0; }
+    .box { width: 100%; }
+    .panel-ops { display: none; } /* Hide secondary links on mobile */
+    .hero-section { height: 250px; }
+    .foot-panel2 { gap: 40px; padding: 20px; }
+}
